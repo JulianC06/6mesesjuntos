@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>6 meses amor mio</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffe6e6, #fdd8e2);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #4a2c2a;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    padding: 2rem 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    padding: 2rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .left, .right {
+    padding: 1rem;
+  }
+
+  .left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-5%);
+  }
+
+  /* SVG de máscara invisible */
+  svg.defs-only {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+
+  /* --- Collage de fotos dentro del 6 --- */
+  .photo-collage {
+    position: relative;
+    width: 96vmin;
+    height: 96vmin;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    /* Sin espacios */
+    gap: 0;
+    border: none;
+
+    /* Máscara SVG */
+    -webkit-mask: url(#mask6) no-repeat center / contain;
+    mask: url(#mask6) no-repeat center / contain;
+    -webkit-mask-type: alpha;
+    mask-type: alpha;
+
+    animation: slowZoom 20s ease-in-out infinite alternate;
+  }
+
+  .photo-collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition: transform 2s ease;
+  }
+
+  .photo-collage img:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes slowZoom {
+    0%   { transform: scale(1) rotate(0deg); }
+    50%  { transform: scale(1.05) rotate(1deg); }
+    100% { transform: scale(1) rotate(-1deg); }
+  }
+
+  /* --- Lado derecho --- */
+  .right h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .right ul {
+    list-style: none;
+  }
+
+  .right li {
+    background: rgba(255,255,255,0.7);
+    border-radius: 15px;
+    margin: 0.6rem 0;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .right li:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.9);
+  }
+
+  /* --- Móvil --- */
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      text-align: center;
+      height: auto;
+    }
+
+    .center {
+      margin: 2rem 0;
+    }
+
+
+    .left h1 {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>6 Mesees Mi Vidaaaa!!!</h1>
+      <p>
+        Medio año!!!!, si medio año juntos y aún no me creo ser tan afortunado, no me creo ser tan dichoso, no me creo todo lo que hemos compartido, 
+        no me creo todo lo que hemos vidido, no me creo todos los TE AMO que nos hemos dado, no me creo la cantidad de besos que hemos intercambiado, 
+        no me creo todo lo que nos hemos extrañado, no me creo lo felices que hemos sido, no me creo llegar hasta acá y seguir adorando tu alma, no me creo llegar a 
+        los 6 meses y que enserio, de verdad me ames, me adores, decidas estar conmigo y para mí y que el tiempo pase tan rápido y sigamos aquí, acumulando días. 
+        Enserio mi amor haces de mi mundo el mejor de los mundos, la mejor novela, la mejor película, la mejor serie, lo mejor de todo porque estás en medio y 
+        agradezco siempre que seas tu y hoy digo SÍ, siempre si a ti y a otros 6 meses más con el amor de mi vida. TE AMO MUCHO AMOR MÍO, mi princesita preciosa. TE AMOO gigante,
+        te amo pequeño, te amo a todas horas y te amo enteramente más que el 10 de mayo donde eres y serás la mujer más maravillosa de la existencia.
+      </p>
+    </div>
+
+    <div class="center">
+      <!-- SVG que define la máscara del número 6 -->
+      <svg class="defs-only" viewBox="0 0 700 800" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <mask id="mask6">
+            <rect width="700" height="800" fill="black" />
+            <text x="50%" y="60%"
+                  text-anchor="middle"
+                  font-size="600"
+                  font-weight="700"
+                  fill="white"
+                  font-family="Poppins, sans-serif">06</text>
+          </mask>
+        </defs>
+      </svg>
+
+      <!-- Collage -->
+      <div class="photo-collage" id="collage"></div>
+    </div>
+
+    <div class="right">
+      <h2>Nuestro tiempo y datos ha sido</h2>
+      <ul>
+        <li><b>26</b> Semanas de adorarnos inmensamente</li>
+        <li><b>184</b> Días que nos hemos dicho Sí a amarnos</li>
+        <li><b>4416</b> Horas de elegir nuestras almas</li>
+        <li><b>467482392384393</b> Besos de los labios más preciosos</li>
+        <li><b>893952332523</b> Abrazos que calman las tormentas</li>
+        <li><b>Infinitas</b> Las ganas de escogerte y quererte siempre</li>
+        <li><b>1</b> Sola persona que amo con todo mi ser ❤️</li>
+      </ul>
+    </div>
+  </div>
+
+<script>
+  // Genera las fotos automáticamente
+  const collage = document.getElementById("collage");
+  for (let i = 1; i <= 50; i++) {
+    const img = document.createElement("img");
+    img.src = `images/ft-${i}.jpeg`;
+    img.alt = `Foto ${i}`;
+    collage.appendChild(img);
+  }
+</script>
+</body>
+</html>

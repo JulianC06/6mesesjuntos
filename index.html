@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazón 1 Brenda de mi vida</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            position: relative; 
+            background-color: white; 
+        }
+        .heart {
+            font-size: 22px; 
+            line-height: 1;
+            white-space: pre-wrap;
+            color: rgb(255, 87, 87);
+            text-align: center;
+            position: absolute; 
+            top: 10%;
+            width: 100%;
+            height: 80%;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.932);
+        }
+        .message {
+            font-size: 24px;
+            
+            color: #fff; 
+            font-weight: normal;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+            position: absolute; 
+            top: 75%; 
+            width: 100%;
+            z-index: 1; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+        }
+        
+        /* Estilo para el collage de imágenes */
+        .collage-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+            grid-template-rows: repeat(3, 1fr); /* 3 filas */
+            gap: 10px; 
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0; 
+        }
+
+        .collage-item {
+            background-color: #fff; /* Fondo blanco para el margen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #fff; /* Márgenes blancos */
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .collage-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cubrir el contenedor sin deformar */
+        }
+        
+        /* Capa negra semitransparente sobre las imágenes */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad */
+            z-index: 1;
+        }
+
+        
+        .next-button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #ff5a5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 10%; /* Colocamos el botón debajo del mensaje */
+            z-index: 1; /* Por encima de las imágenes y capa */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
+            transition: background-color 0.3s;
+        }
+
+        .next-button:hover {
+            background-color: #d04b53;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Capa negra semitransparente sobre las imágenes -->
+    <div class="overlay"></div>
+
+
+    <!-- Collage de imágenes -->
+    <div class="collage-container">
+        <div class="collage-item"><img src="images/ft-1.jpeg" alt="Imagen 1"></div>
+        <div class="collage-item"><img src="images/ft-2.jpeg" alt="Imagen 2"></div>
+        <div class="collage-item"><img src="images/ft-3.jpeg" alt="Imagen 3"></div>
+        <div class="collage-item"><img src="images/ft-4.jpeg" alt="Imagen 4"></div>
+        <div class="collage-item"><img src="images/ft-5.jpeg" alt="Imagen 5"></div>
+        <div class="collage-item"><img src="images/ft-6.jpeg" alt="Imagen 6"></div>
+        <div class="collage-item"><img src="images/ft-7.jpeg" alt="Imagen 7"></div>
+        <div class="collage-item"><img src="images/ft-8.jpeg" alt="Imagen 8"></div>
+        <div class="collage-item"><img src="images/ft-9.jpeg" alt="Imagen 9"></div>
+    </div>
+
+    <div id="heart" class="heart"></div>
+    <br>
+    <div id="message" class="message">Este es mi corazón que solo sabe amar tu nombre</div>
+
+    <!-- Botón Siguiente -->
+    <button class="next-button" onclick="window.location.href='pagina2.html'">Siguiente</button>
+
+    <script>
+        const name = "Brenda Daniela Meneses Terrios ";
+        const heartShape = [
+            "@@@@@@@@@@@@@               @@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@         @@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@@@@@@@",
+            "@@@@@@@@@@",
+            "@@@@@@",
+            "@@",
+
+
+
+        ];
+
+        function buildHeart() {
+            let heart = '';
+            let currentIndex = 0; // Para seguir el índice del nombre
+            let heartContent = ''; // Contenido de todo el corazón
+
+            heartShape.forEach(line => {
+                // Reemplaza los @ con las letras del nombre, cíclicamente
+                let lineWithName = line.replace(/@/g, () => {
+                    const char = name[currentIndex % name.length]; // Usar el índice cíclicamente
+                    currentIndex++;
+                    return char;
+                });
+                heartContent += lineWithName + "\n";
+            });
+
+            return heartContent;
+        }
+
+        function animateHeart() {
+            const heartContent = buildHeart();
+            const heartElement = document.getElementById('heart');
+            let index = 0;
+
+            // Escribir letra por letra con un pequeño delay
+            const interval = setInterval(() => {
+                heartElement.textContent += heartContent[index];
+                index++;
+
+                if (index >= heartContent.length) {
+                    clearInterval(interval);
+                    document.getElementById('message').style.opacity = 1; // Mostrar el mensaje al final
+                }
+            }, 10);
+        }
+
+        // Llamar a la función de animación cuando se carga la página
+        window.onload = () => {
+            animateHeart();
+        };
+    </script>
+
+</body>
+</html>
